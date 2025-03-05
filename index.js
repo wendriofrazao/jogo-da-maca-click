@@ -1,10 +1,15 @@
-let imagem = document.getElementById("imagem");
-let contador_de_clicks = document.querySelector("p");
-let contador = 0;
-imagem.addEventListener("click", () => {
-  contador++;
-  contador_de_clicks.innerHTML = contador;
-  if (contador === 1000) {
-    contador_de_clicks.innerHTML = contador = 0;
+const image = document.getElementById('image');
+const clickCount = document.querySelector('p');
+
+let counter = 0;
+
+const handleClickImage = () => {
+  counter++;
+  clickCount.innerHTML = counter;
+
+  if (counter === 1000) {
+    clickCount.innerHTML = counter = 0;
   }
-});
+}
+
+image?.addEventListener('click', handleClickImage);
